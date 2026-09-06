@@ -1,0 +1,32 @@
+# =============================================================================
+# TaskFlow API - FastAPI project dependencies
+# =============================================================================
+# Split into groups so you understand WHAT each library is for.
+# Install everything with:  .venv/bin/pip install -r requirements.txt
+
+# ---- Web framework + ASGI server -----------------------------------------
+fastapi==0.111.0          # The web framework itself (builds the API)
+uvicorn[standard]==0.30.0 # ASGI server that runs FastAPI in production/local
+
+# ---- Data validation (Pydantic comes bundled with FastAPI) ---------------
+pydantic==2.7.4           # Data validation / serialization library
+pydantic-settings==2.3.4  # Typed config management via env vars / .env file
+email-validator==2.1.1    # Used by Pydantic for EmailStr validation
+
+# ---- Database (ORM) -------------------------------------------------------
+sqlalchemy==2.0.30        # SQLAlchemy ORM - talk to Postgres using Python objects
+psycopg2-binary==2.9.9    # Postgres driver / adapter used by SQLAlchemy
+alembic==1.13.1           # Database migration tool (schema versioning)
+
+# ---- Auth -----------------------------------------------------------------
+python-jose[cryptography]==3.3.0  # Encode/decode JWT tokens
+passlib[bcrypt]==1.7.4             # Hash passwords (bcrypt under the hood)
+bcrypt==4.0.1                      # bcrypt hashing backend
+
+# ---- Caching / tasks ------------------------------------------------------
+redis==5.0.4               # Redis client (caching + rate limiting)
+celery==5.4.0              # Distributed task queue (async/background work)
+
+# ---- Testing --------------------------------------------------------------
+pytest==8.2.2              # Test runner
+httpx==0.27.0              # HTTP client used by TestClient + async tests

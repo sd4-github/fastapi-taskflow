@@ -1,0 +1,41 @@
+# =============================================================================
+# pyproject.toml  --  package metadata + tool config (industry standard)
+# =============================================================================
+# Makes `src/app` the installable package named "app". Installing it in
+# editable mode (pip install -e .) lets you run uvicorn / pytest from anywhere
+# while the code stays in src/app.
+#
+#   .venv/bin/pip install -e .
+#   .venv/bin/uvicorn app.main:app --reload   (run from anywhere)
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "taskflow"
+version = "1.0.0"
+description = "FastAPI interview-prep demo API (basic -> advanced)"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic",
+    "pydantic-settings",
+    "sqlalchemy",
+    "psycopg2-binary",
+    "python-jose[cryptography]",
+    "passlib[bcrypt]",
+    "redis",
+    "celery",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "httpx"]
+
+[tool.setuptools.packages.find]
+where = ["src"]          # find packages under src/
+
+[tool.pytest.ini_options]
+# pytest will discover tests/ and python_scripts/tests*
+testpaths = ["tests"]
