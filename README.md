@@ -89,3 +89,14 @@ API available at [http://127.0.0.1:8000](http://127.0.0.1:8000) | Swagger docs a
 - Testing with pytest + TestClient
 
 See [INTERVIEW_TOPICS.md](INTERVIEW_TOPICS.md) for the full topic-to-file mapping.
+
+## More Projects
+
+- [TakkarCV](https://github.com/sd4-github/takkarcv)
+- [Keycloak RBAC Django Auth](https://github.com/sd4-github/keycloak-rbac-django-auth)
+- [Bulk Contract Processing](https://github.com/sd4-github/bulk-contract-processing)
+- [Contract Processing](https://github.com/sd4-github/contract-processing)
+
+## Built With
+
+All projects in this collection are built using [OpenCode](https://opencode.ai) free models — DeepSeek V4 Flash, Big Pickle, Mimo V2.5, and more.
