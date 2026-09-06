@@ -99,4 +99,4 @@ See [INTERVIEW_TOPICS.md](INTERVIEW_TOPICS.md) for the full topic-to-file mappin
 
 ## Built With
 
-All projects in this collection are built using [OpenCode](https://opencode.ai) free models — DeepSeek V4 Flash, Big Pickle, Mimo V2.5, and more.
+Made with [OpenCode](https://opencode.ai).
